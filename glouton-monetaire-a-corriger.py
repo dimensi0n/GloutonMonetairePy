@@ -15,7 +15,7 @@ def Monnaie(somme,ListeMontants) :
     ListeNbPieces=[0 for x in ListeMontants]
     for k in range(len(ListeMontants)) :
     	ListeNbPieces[k]=somme//ListeMontants[k]
-    	somme%=ListeMontants[k]
+    	somme = round(somme%ListeMontants[k], 2)
     return somme,ListeNbPieces
 
 print(Monnaie(montant, pieces))
